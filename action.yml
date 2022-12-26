@@ -1,7 +1,28 @@
 name: Mixpanel Annotate
 description: Creates a Mixpanel Annotation
 inputs:
+  description:
+    description: The text that will be shown when looking at the annotation
+    required: true
+  date:
+    description: Date of the Annotation (format: YYYY-MM-DD HH:mm:ss)
+    required: false
+  project_id:
+    description: Mixpanel Project ID
+    required: true
+  service_account_username:
+    description: Mixpanel Service Account Username
+    required: true
+  service_account_password:
+    description: Mixpanel Service Account Password
+    required: true
 outputs:
+  description:
+    description: The text that will be shown when looking at the annotation
+  date:
+    description: Date of the Annotation (format: YYYY-MM-DD HH:mm:ss)
+  id:
+    description: Annotation ID
 runs:
   using: 'node16'
   main: 'dist/index.js'
